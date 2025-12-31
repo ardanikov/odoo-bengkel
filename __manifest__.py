@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Manajemen Bengkel Mobil",
+    'name': "Salon",
 
-    'summary': "Modul untuk manajemen Bengkel Mobil",
+    'summary': "salon",
 
     'description': """
 Long description of module's purpose
