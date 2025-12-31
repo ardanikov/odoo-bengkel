@@ -1,19 +1,16 @@
-# -*- coding: utf-8 -*-
-
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
 
-# class test(models.Model):
-#     _name = 'test.test'
-#     _description = 'test.test'
+class Perbaikan(models.Model):
+    _name = 'bengkel.perbaikan'
+    _description = 'Perbaikan Mobil'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+    name = fields.Char(string='Nama Perbaikan', required=True)
+    deskripsi = fields.Text(string='Deskripsi')
+    biaya = fields.Float(string='Biaya')
+    status = fields.Selection([
+        ('baru', 'Baru'),
+        ('proses', 'Dalam Proses'),
+        ('selesai', 'Selesai'),
+    ], string='Status', default='baru')
 
