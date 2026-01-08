@@ -9,3 +9,8 @@ class CdnPelanggan(models.Model):
 
     partner_id = fields.Many2one(comodel_name='res.partner', required=True, ondelete='cascade', string='Partner')
 
+    @api.model
+    def create(self, vals):
+        vals['is_pelanggan'] = True
+        return super(CdnPelanggan, self).create(vals)
+
